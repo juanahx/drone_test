@@ -16,4 +16,6 @@ pipeline:
        - CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
        - chmod 777 ./app
        - ls -lsr
+       - pwd
+       - ls /srv/drone-demo -lsr
        #- ./app
