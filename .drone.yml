@@ -18,4 +18,5 @@ pipeline:
        - ls -lsr
        - pwd
        - ls /srv/drone-demo -lsr
+       - app
        #- ./app
