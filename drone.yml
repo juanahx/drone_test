@@ -1,0 +1,13 @@
+kind: pipeline
+name: default
+
+steps:
+- name: foo
+  image: alpine
+  commands:
+  - touch hello.txt
+
+- name: bar
+  image: alpine
+  commands:
+  - ls hello.txt
