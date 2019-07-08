@@ -30,6 +30,7 @@ steps:
   image: redis
   commands:
   - sleep 5
+  - echo $REDIS_SERVICE_HOST jjajaa
   - redis-cli -h $REDIS_SERVICE_HOST ping
 
 services:
