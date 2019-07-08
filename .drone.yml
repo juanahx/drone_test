@@ -22,6 +22,6 @@ steps:
   - ls -lsr /drone/
   - cp ./app /drone/
   - /drone/app
-  - chmod +X -R /drone/src/
+  - chmod +x -R /drone/src
   - ls -lsr /drone/src/
   - /drone/src/app
