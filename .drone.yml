@@ -24,4 +24,16 @@ steps:
   - /drone/app
   - chmod +x -R /drone/src
   - ls -lsr /drone/src/
-  - /drone/src/app
+  #- /drone/src/app
+
+- name: test
+  image: redis
+  commands:
+  - sleep 5
+  - redis-cli -h $REDIS_SERVICE_HOST ping
+
+services:
+- name: redis
+  image: redis
+  ports:
+  - 6379
