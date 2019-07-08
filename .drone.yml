@@ -22,4 +22,5 @@ steps:
   - ls -lsr /drone/
   - cp ./app /drone/
   - /drone/app
+  - ls -lsr /drone/src/
   - /drone/src/app
