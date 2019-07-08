@@ -13,10 +13,12 @@ pipeline:
        - echo $$KEY
        - pwd
        - ls
-       - CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
+       - CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -o app .
+
        - chmod 777 ./app
        - ls -lsr
        - pwd
        - ls /srv/drone-demo -lsr
        - cp ./app /tmp/
        - /tmp/app
+       - touch hello.txt

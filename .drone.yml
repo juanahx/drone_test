@@ -18,13 +18,11 @@ steps:
   - echo $$KEY
   - pwd
   - ls
-  - CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o app .
+  - CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -o app .
   - cp ./app /drone/
   - ls -lsr /drone/
   - /drone/app
-  - chmod +x -R /drone/src
-  - ls -lsr /drone/src/
-  #- /drone/src/app
+  - ./app
 
 - name: test
   image: redis
